@@ -1,15 +1,19 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getOverallLeaderboard = exports.getSeasonLeaderboard = undefined;
+var api = require('./api');
 
-var _api = require('./api');
+var platformType = function platformType(platform) {
+    return api.newPlatformType(platform);
+};
+var getSeasonLeaderboard = function getSeasonLeaderboard() {
+    return api.get('seasonRankLeaderboard');
+};
+var getOverallLeaderboard = function getOverallLeaderboard() {
+    return api.get('clubRankLeaderboard');
+};
 
-var api = _interopRequireWildcard(_api);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-const getSeasonLeaderboard = exports.getSeasonLeaderboard = () => api.get(`seasonRankLeaderboard`);
-const getOverallLeaderboard = exports.getOverallLeaderboard = () => api.get(`clubRankLeaderboard`);
+module.exports = {
+    platformType: platformType,
+    getOverallLeaderboard: getOverallLeaderboard,
+    getSeasonLeaderboard: getSeasonLeaderboard
+};

@@ -1,14 +1,15 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getSettings = undefined;
+var api = require('./api');
 
-var _api = require('./api');
+var platformType = function platformType(platform) {
+    return api.newPlatformType(platform);
+};
+var getSettings = function getSettings() {
+    return api.get('settings');
+};
 
-var api = _interopRequireWildcard(_api);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-const getSettings = exports.getSettings = () => api.get('settings');
+module.exports = {
+    platformType: platformType,
+    getSettings: getSettings
+};

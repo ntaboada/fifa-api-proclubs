@@ -1,49 +1,125 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getClubInfo = exports.getClubMatchHistory = exports.getClubStats = exports.getClubSeasonStats = exports.getClubSeasonRank = exports.getClubMemberStats = exports.getClubMembers = exports.getClubIdByName = undefined;
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(values);
 
-var _api = require('./api');
+var api = require('./api');
 
-var api = _interopRequireWildcard(_api);
+function values(obj) {
+  var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, prop;
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+  return regeneratorRuntime.wrap(function values$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _iteratorNormalCompletion = true;
+          _didIteratorError = false;
+          _iteratorError = undefined;
+          _context.prev = 3;
+          _iterator = Object.keys(obj)[Symbol.iterator]();
 
-function* values(obj) {
-  for (let prop of Object.keys(obj)) {
-    yield obj[prop];
-  }
+        case 5:
+          if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+            _context.next = 12;
+            break;
+          }
+
+          prop = _step.value;
+          _context.next = 9;
+          return obj[prop];
+
+        case 9:
+          _iteratorNormalCompletion = true;
+          _context.next = 5;
+          break;
+
+        case 12:
+          _context.next = 18;
+          break;
+
+        case 14:
+          _context.prev = 14;
+          _context.t0 = _context['catch'](3);
+          _didIteratorError = true;
+          _iteratorError = _context.t0;
+
+        case 18:
+          _context.prev = 18;
+          _context.prev = 19;
+
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+
+        case 21:
+          _context.prev = 21;
+
+          if (!_didIteratorError) {
+            _context.next = 24;
+            break;
+          }
+
+          throw _iteratorError;
+
+        case 24:
+          return _context.finish(21);
+
+        case 25:
+          return _context.finish(18);
+
+        case 26:
+        case 'end':
+          return _context.stop();
+      }
+    }
+  }, _marked, this, [[3, 14, 18, 26], [19,, 21, 25]]);
+}
+
+var platformType = function platformType(platform) {
+  return api.newPlatformType(platform);
 };
 
-const getClubIdByName = async query => {
-  const res = await api.get(`clubsComplete/${query}`);
+var getClubIdByName = async function getClubIdByName(query) {
+  var res = await api.get('clubsComplete/' + query);
   return res.clubId;
 };
 
-const getClubMembers = async clubId => {
-  const res = await api.get(`clubs/${clubId}/members`);
+var getClubMembers = async function getClubMembers(clubId) {
+  var res = await api.get('clubs/' + clubId + '/members');
   return Array.from(values(res));
 };
 
-const getClubMemberStats = clubId => api.get(`clubs/${clubId}/membersComplete`);
+var getClubMemberStats = function getClubMemberStats(clubId) {
+  return api.get('clubs/' + clubId + '/membersComplete');
+};
 
-const getClubSeasonRank = clubId => api.get(`clubs/${clubId}/seasonRank`);
+var getClubSeasonRank = function getClubSeasonRank(clubId) {
+  return api.get('clubs/' + clubId + '/seasonRank');
+};
 
-const getClubSeasonStats = clubId => api.get(`clubs/${clubId}/seasonalStats`);
+var getClubSeasonStats = function getClubSeasonStats(clubId) {
+  return api.get('clubs/' + clubId + '/seasonalStats');
+};
 
-const getClubStats = clubId => api.get(`clubs/${clubId}/stats`);
+var getClubStats = function getClubStats(clubId) {
+  return api.get('clubs/' + clubId + '/stats');
+};
 
-const getClubMatchHistory = clubId => api.get(`clubs/${clubId}/matches`);;
+var getClubMatchHistory = function getClubMatchHistory(clubId) {
+  return api.get('clubs/' + clubId + '/matches');
+};
 
-const getClubInfo = clubId => api.get(`clubs/${clubId}/info`);;
+var getClubInfo = function getClubInfo(clubId) {
+  return api.get('clubs/' + clubId + '/info');
+};
 
-exports.getClubIdByName = getClubIdByName;
-exports.getClubMembers = getClubMembers;
-exports.getClubMemberStats = getClubMemberStats;
-exports.getClubSeasonRank = getClubSeasonRank;
-exports.getClubSeasonStats = getClubSeasonStats;
-exports.getClubStats = getClubStats;
-exports.getClubMatchHistory = getClubMatchHistory;
-exports.getClubInfo = getClubInfo;
+module.exports = {
+  platformType: platformType,
+  getClubIdByName: getClubIdByName,
+  getClubMembers: getClubMembers,
+  getClubMemberStats: getClubMemberStats,
+  getClubSeasonRank: getClubSeasonRank,
+  getClubSeasonStats: getClubSeasonStats,
+  getClubStats: getClubStats,
+  getClubMatchHistory: getClubMatchHistory,
+  getClubInfo: getClubInfo
+};

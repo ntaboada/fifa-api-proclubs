@@ -29,7 +29,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
   },
   "deprecated": "rename",
   "description": "",
@@ -51,6 +52,10 @@
     "easports",
     "nodejs"
   ],
+  "scripts": {
+    "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
+    "prepubliish": "npm run build"
+  },
   "license": "ISC",
   "name": "fifa-api-proclubs",
   "version": "1.0.0"

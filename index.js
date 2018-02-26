@@ -1,11 +1,11 @@
-import * as club from './lib/club';
-import * as leaderboard from './lib/leaderboard';
-import * as member  from'./lib/member';
-import * as misc  from './lib/misc';
+const club  = require('./lib/club');
+const leaderboard  = require('./lib/leaderboard');
+const member  = require('./lib/member');
+const misc  = require('./lib/misc');
 
-export {
+module.exports = {
   club,
   leaderboard,
   member,
   misc
-}
+};

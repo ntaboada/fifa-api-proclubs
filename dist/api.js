@@ -1,28 +1,97 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.get = undefined;
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(values);
 
-var _axios = require('axios');
+var axios = require('axios');
 
-var axios = _interopRequireWildcard(_axios);
+var API_URL = 'https://www.easports.com/iframe/fifa17proclubs/api/platforms';
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+var platformType = null;
 
-const API_URL = 'https://www.easports.com/iframe/fifa17proclubs/api/platforms';
-const API_PLATFORM = 'PS4';
+function values(obj) {
+  var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, prop;
 
-function* values(obj) {
-  for (let prop of Object.keys(obj)) yield obj[prop];
+  return regeneratorRuntime.wrap(function values$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _iteratorNormalCompletion = true;
+          _didIteratorError = false;
+          _iteratorError = undefined;
+          _context.prev = 3;
+          _iterator = Object.keys(obj)[Symbol.iterator]();
+
+        case 5:
+          if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+            _context.next = 12;
+            break;
+          }
+
+          prop = _step.value;
+          _context.next = 9;
+          return obj[prop];
+
+        case 9:
+          _iteratorNormalCompletion = true;
+          _context.next = 5;
+          break;
+
+        case 12:
+          _context.next = 18;
+          break;
+
+        case 14:
+          _context.prev = 14;
+          _context.t0 = _context['catch'](3);
+          _didIteratorError = true;
+          _iteratorError = _context.t0;
+
+        case 18:
+          _context.prev = 18;
+          _context.prev = 19;
+
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+
+        case 21:
+          _context.prev = 21;
+
+          if (!_didIteratorError) {
+            _context.next = 24;
+            break;
+          }
+
+          throw _iteratorError;
+
+        case 24:
+          return _context.finish(21);
+
+        case 25:
+          return _context.finish(18);
+
+        case 26:
+        case 'end':
+          return _context.stop();
+      }
+    }
+  }, _marked, this, [[3, 14, 18, 26], [19,, 21, 25]]);
 }
 
-const get = exports.get = async endpoint => {
+var newPlatformType = function newPlatformType(platform) {
+  return platformType = platform;
+};
+
+var get = async function get(endpoint) {
   try {
-    const response = await axios.get(`${API_URL}/${API_PLATFORM}/${endpoint}`);
+    var response = await axios.get(API_URL + '/' + platformType + '/' + endpoint);
     return Array.from(values(response.data.raw))[0];
   } catch (e) {
     console.log(e);
   }
+};
+
+module.exports = {
+  newPlatformType: newPlatformType,
+  get: get
 };
