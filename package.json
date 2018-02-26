@@ -1,0 +1,57 @@
+{
+  "_from": "fifa-18-pro-clubs-api",
+  "_id": "fifa-18-pro-clubs-api@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-+RMq8NBfeIodCYKHos6dzxBSRdrVfMw7JL3APlO/SN7NcezIVIn2ZGSqAH+CMGDFRzStVq4TcCC0d/uagEgZ6Q==",
+  "_location": "/fifa-18-pro-clubs-api",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "fifa-18-pro-clubs-api",
+    "name": "fifa-18-pro-clubs-api",
+    "escapedName": "fifa-18-pro-clubs-api",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/fifa-18-pro-clubs-api/-/fifa-18-pro-clubs-api-1.0.0.tgz",
+  "_shasum": "e009594e1706224c98d68155143d71e89e78d2a4",
+  "_spec": "fifa-18-pro-clubs-api",
+  "author": {
+    "name": "Nicolas Taboada"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "deprecated": "rename",
+  "description": "",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "keywords": [
+    "api",
+    "fifa",
+    "18",
+    "easports",
+    "nodejs"
+  ],
+  "license": "ISC",
+  "name": "fifa-api-proclubs",
+  "version": "1.0.0"
+}
