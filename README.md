@@ -1,9 +1,9 @@
-## Fifa 18 API ##
+## Fifa 2018 Clubs Pro API ##
 
-Fifa 2018 Clubs Pro API, built on Node.JS.
+Fifa 2018 Clubs Pro API, built on NodeJS/ES6.  Wrapper to get stats for Fifa 18 Pro Clubs Teams.
 
 
-### Installation
+## Installation
 
 ```
 npm install fifa-api-proclubs
