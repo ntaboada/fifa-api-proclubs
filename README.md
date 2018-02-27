@@ -57,7 +57,6 @@ We can perform different operations according leaderboard:
 -  getOverallLeaderboard()
 -  getSeasonLeaderboard()
 
-
 Example:
 
 ```
@@ -76,6 +75,7 @@ _getMembersClubStats_  retrieves actual data of a player inside a club. This ope
 
 _getMembersStats_ retrieves individual data of a player. This operation require a blazeId (playerId) as parameter.
 
+
 Example:
 
 ```
@@ -85,6 +85,10 @@ const resp = await member.getMembersClubStats('13607', 'rE4p14Gj8KOtkGq63eL8mA!!
 ### Settings
 
 - getSettings()
+
+
+Example:
+
 ```
 const resp = await settings.getSettings();
 ```
