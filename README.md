@@ -71,9 +71,9 @@ We can perform different operations according players/members:
 -  getMembersStats(blazeId)
 
 
-_getMembersClubStats_  retrieves actual data of a player inside a club. This operation require a **clubId** and **blazeId** (playerId) as parameters.
+_getMembersClubStats_  retrieves actual data of a player inside a club. This operation require a **_clubId_** and **_blazeId_** (playerId) as parameters.
 
-_getMembersStats_ retrieves individual data of a player. This operation require a **blazeId** (playerId) as parameter.
+_getMembersStats_ retrieves individual data of a player. This operation require a **_blazeId_** (playerId) as parameter.
 
 
 Example:

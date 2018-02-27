@@ -84,9 +84,7 @@ var newPlatformType = function newPlatformType(platform) {
 
 var get = async function get(endpoint) {
   try {
-    console.log(platformType);
     var response = await axios.get(API_URL + '/' + platformType + '/' + endpoint);
-    console.log(Array.from(values(response.data.raw))[0]);
     return Array.from(values(response.data.raw))[0];
   } catch (e) {
     console.log(e);
