@@ -42,7 +42,7 @@ We can perform different operations according clubs:
 - getClubMatchHistory(clubId)
 - getClubInfo(clubId)
 
-All operations require a _**ClubId**_ as paramater. 
+All operations require a _**clubId**_ as paramater. 
 
 Example:
 
@@ -71,9 +71,9 @@ We can perform different operations according players/members:
 -  getMembersStats(blazeId)
 
 
-_getMembersClubStats_  retrieves actual data of a player inside a club. This operation require a clubId and blazeId (playerId) as parameters.
+_getMembersClubStats_  retrieves actual data of a player inside a club. This operation require a **clubId** and **blazeId** (playerId) as parameters.
 
-_getMembersStats_ retrieves individual data of a player. This operation require a blazeId (playerId) as parameter.
+_getMembersStats_ retrieves individual data of a player. This operation require a **blazeId** (playerId) as parameter.
 
 
 Example:
@@ -96,7 +96,7 @@ const resp = await settings.getSettings();
 
 ## Contributing
 
-Contributors and committers are are welcome.
+Contributors and committers are welcome.
 
 
 ## Made with ❤ by
