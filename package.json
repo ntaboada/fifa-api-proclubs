@@ -54,7 +54,7 @@
   ],
   "scripts": {
     "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
-    "prepubliish": "npm run build"
+    "start": "npm run build"
   },
   "license": "ISC",
   "name": "fifa-api-proclubs",
